@@ -1,0 +1,324 @@
+index.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutterfields</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="butterfly">
+            <img src="images/butterfly.png" alt="Special Butterfly">
+        </div>
+
+        <div class="dialogue-box"><p></p>
+            <input type="text" id="input" placeholder="...">
+            <button id="submit-button">Enter</button>
+        </div>
+
+        <div id="output"></div>
+        <button class="button"><p></p></button>
+
+        <div class="butterfly-container">
+            <img class="butterfly-image" src="images/butterfly1.png" alt="Butterfly">
+            <img class="butterfly-image" src="images/butterfly2.png" alt="Butterfly">
+            <img class="butterfly-image" src="images/butterfly3.png" alt="Butterfly">
+            <img class="butterfly-image" src="images/butterfly4.png" alt="Butterfly">
+            <img class="butterfly-image" src="images/butterfly5.png" alt="Butterfly">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+style.css
+
+body {
+    background-color: rgb(0, 27, 53);
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: backgroundImage 2s ease-in-out;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;  
+}
+
+.butterfly {
+    position: absolute;
+}
+
+.butterfly img {
+    width: 70px;
+    height: 70px;
+    display: none;
+}
+    
+.butterfly-container img{
+    width: 80px;
+    animation: flutter 0.7s infinite alternate, move 10s linear infinite alternate;
+    transform-origin: center center;
+}
+
+.butterfly-container {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    display: flex;
+    top: -370px;
+}
+
+@keyframes flutter {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+        left: 0;
+        top: 50%;
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-5deg);
+        left: 100%;
+        top: 0;
+    }
+}
+
+.dialogue-box {
+    display: none;
+    transform: translate(140%, 110%);
+    background-color: rgba(42, 42, 0, 0.553);
+    font-family: 'French Script MT';
+    color: rgb(254, 223, 168);
+    font-size: x-large;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    position: relative;
+    bottom: -85px;
+    border-radius: 10px;
+    animation: glow 1s infinite;
+  }
+
+#output {
+    display: none;
+    transform: translate(140%, 110%);
+    background-color: rgba(42, 42, 0, 0.553);
+    font-family: 'French Script MT';
+    color: rgb(254, 223, 168);
+    font-size: x-large;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    position: relative;
+    bottom: -180px;
+    border-radius: 10px;
+}
+
+#input {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333;
+    background-color:  rgba(0, 13, 13, 0.45);
+    left: 12%;
+}
+  
+#submit {
+    position: absolute;
+    bottom: 12px;
+    left: 85%;
+    z-index: 2;
+    cursor: pointer;
+    padding: 7px 10px;
+    background-color: rgb(0, 13, 13);
+    color: rgb(255, 226, 180);
+    border: none;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(252, 205, 103, 0.95);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px rgba(252, 205, 103, 0.95);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(252, 205, 103, 0.95);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(252, 205, 103, 0.95);
+    }
+}
+
+.button {
+    display: none;
+    position: relative;
+    bottom: -380px;
+    margin-left: 650px;
+    cursor: pointer;
+    padding: 4px 10px;
+    background-color: rgba(42, 42, 0, 0.553);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    animation: glowing 1s infinite;
+  }
+
+@keyframes glowing {
+    0% {
+      box-shadow: 0 0 10px rgba(252, 205, 103, 0.95);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(252, 205, 103, 0.95);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(252, 205, 103, 0.95);
+    }
+  }
+
+.button:hover {
+    animation-play-state: paused;
+  }
+  
+@keyframes move {
+    0%, 100% {
+        transform: translate(0, 0) scale(1.2);
+    }
+    25% {
+        transform: translate(-30vw, 30vh) scale(1);
+    }
+    50% {
+        transform: translate(50vw, 50vh) scale(0.8);
+    }
+    75% {
+        transform: translate(-20vw, 80vh) scale(1.2);
+    }
+}
+
+.butterfly-container img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.butterfly-container img:nth-child(2) {
+    animation-delay: 2s;
+    width: 60px;
+}
+
+.butterfly-container img:nth-child(3) {
+    animation-delay: 4s;
+    width: 70px;
+}
+
+.butterfly-container img:nth-child(4) {
+    animation-delay: 5s;
+}
+
+.butterfly-container img:nth-child(5) {
+    animation-delay: 3s;
+    width: 60px;
+}
+
+script.js
+const specialButterfly = document.querySelector('.butterfly img');
+const dialogueBox = document.querySelector('.dialogue-box');
+const backgroundButton = document.querySelector('.backgroundButton');
+const output = document.getElementById('output');
+const input = document.getElementById('input');
+const submitButton = document.getElementById('submit-backgroundButton');
+
+const backgrounds = [
+  "url('images/background2.jpg')"
+];
+
+const dialogues = [
+  "Hello there, Welcome to Flutterfields, home to the animated butterflies. What's your name?",
+  "Our creator is a youthful software developer...",
+];
+
+const buttons = [
+  "Sure, why not!",
+  "Hire Her Now!"
+]
+
+document.body.style.backgroundImage = `url(${backgrounds[currentBackgroundIndex]})`;
+let currentBackgroundIndex = 0;
+
+dialogueBox.style.display = 'none';
+
+function positionButterfly() {
+    const centerX = window.innerWidth / 2 - specialButterfly.width / 2;
+    const centerY = window.innerHeight / 2.5 - specialButterfly.height / 2;
+    specialButterfly.style.transition = '1s linear';
+    specialButterfly.style.transform = `translate(${centerX}px, ${centerY}px) scale(1.2)`;
+  }
+  positionButterfly();
+
+  function updateContent() {
+    dialogueBox.querySelector('p').textContent = dialogues[currentBackgroundIndex];
+    backgroundButton.querySelector('p').innerText = buttons[currentBackgroundIndex];
+  }
+  updateContent();
+
+  window.addEventListener('mousemove', () => {
+    specialButterfly.style.display = 'block';
+    positionButterfly();
+  });
+
+  specialButterfly.addEventListener('mouseover', () => {
+    dialogueBox.style.display = 'block';
+    positionButterfly();
+  });
+
+  specialButterfly.addEventListener('mouseleave', () => {
+    dialogueBox.style.display = 'block';
+    positionButterfly();
+  });
+
+  let dialogueBoxDisplayed = false;
+  
+  submitButton.addEventListener('click', () => {
+    const userInput = input.value;
+    output.textContent = `Nice to meet you ${userInput}. We blue butterflies are on our way to the Walper Waterbeds. Come along and I can tell you about our creator!`;
+    submitButton.style.display = 'none';
+    input.style.display = 'none';
+    backgroundButton.style.display = 'block';
+    output.style.display = 'block';
+
+    if (!dialogueBoxDisplayed) {
+      dialogueBox.style.display = 'none';
+    }
+   });
+   
+  backgroundButton.addEventListener('click', () => {
+    output.style.display = 'none';
+    dialogueBox.style.display = 'block';
+
+   currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
+
+    const newBackground = backgrounds[currentBackgroundIndex];
+    document.body.style.backgroundImage = newBackground;
+  
+    specialButterfly.style.display = 'block';
+    updateContent();
+  });
+
+  updateContent();

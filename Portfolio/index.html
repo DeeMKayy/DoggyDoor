@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutterfields</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="flip-container">
+        <div class="flipper">
+            <div class="page next"></div>
+            <div class="page previous"></div>
+
+            <div class="container">
+                <div class="butterfly">
+                    <img src="images/butterfly.png" alt="Special Butterfly">
+                </div>
+
+                <div class="dialogue-box"><p></p>
+                    <input type="text" id="input" placeholder="Your name...">
+                    <button class="submit-button">Enter</button>
+                    <br><br>
+                    <img id="purple" src="images/purple.jpg" alt="Purple image">
+                    <img id="blue" src="images/blue.jpg" alt="Blue image">
+                    <img id="yellow" src="images/yellow.jpg" alt="Yellow image">
+                    <img id="green" src="images/green.jpg" alt="Green image">
+                    <img id="pink" src="images/pink.jpg" alt="Pink image">
+                    <img id="silver" src="images/silver.jpg" alt="Silver image">
+                </div>
+
+                <div id="output"></div>
+                <button class="background-button"><p></p></button>
+
+                <div class="variant-container">
+                    <p>Would you like to name it?</p>
+                    <input type="text" id="variant-name" placeholder="Name...">
+                    <button class="variant-button">Enter</button>
+                </div>
+
+                <img id="variant" src="images/variant.png" alt="Variant">
+                <div id="variant-text"></div>
+
+                <div class="butterfly-container">
+                    <img class="orange-image" src="images/butterfly1.png" alt="Butterfly">
+                    <img class="colored-image" src="images/butterfly2.png" alt="Butterfly">
+                    <img class="orange-image" src="images/butterfly3.png" alt="Butterfly">
+                    <img class="colored-image" src="images/butterfly4.png" alt="Butterfly">
+                    <img class="orange-image" src="images/butterfly5.png" alt="Butterfly">
+                </div>
+
+                <div class="player-container">
+                <canvas class="maze"></canvas>
+                    <img id="player" src="images/player.png" alt="Player">
+                </div>
+
+                <div id="message-container">
+                    <div id="message">
+                    <h1>Congratulations!</h1>
+                    <p>You are done.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio autoplay loop>
+        <source src="Portfolio/audio/Butterfly Fluttering.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="main.js"></script>
+    <script src="maze.js"></script>
+</body>
+</html>
