@@ -64,8 +64,7 @@
 
     const dialogues = [
       "Hello there, Welcome to Flutterfields, home to the animated butterflies. What's your name?",
-      "I bet you've never had a butterfly of your own. Let's make you a virtual one. Choose a color: ",
-      "Oh no! Your butterfly is caught in a maze! Use the arrow keys to guide it through.",
+      "I bet you've never had a butterfly of your own. Let's make you a navigation butterfly. It'll help you proceed to the next project or proceed to the fens! Choose a color: ",
       "Welcome to FlutterClub, notice the lights? I agree, the synchronized fluttering is kind of cringe. Well no need to wait any longer, let's go home.",
       "We're home! Thanks for staying for the journey, I hope you enjoyed it too. I bet next time you visit they'll be more features, for now, you can use the social links my friends have to reach her. They even have one that let's you view her other projects! In conclusion, if you want a website of your own, tap the button below and let her make your personal/business web presence dreams come true!"
     ];
@@ -104,7 +103,7 @@
       //Adding an event listener for when the submit button is clicked.
       submitButton.addEventListener('click', () => {        
           const userInput = input.value;
-          output.textContent = `Nice to meet you ${userInput}. We blue butterflies are on our way to Blu Lagoon but we can't get there by ourselves. Care to join us?`;
+          output.textContent = `Nice to meet you ${userInput}. We blue butterflies are on our way to the fens, but before we get there we'll check on our developer's other projects. Care to join us?`;
           submitButton.style.display = 'none';
           input.style.display = 'none';
           output.style.display = 'block';
@@ -124,6 +123,32 @@
         specialButterfly.style.display = 'none';
         variantDisplayed = true;
       });
+
+      function activateNavigator() {
+        variant.style.animation = 'flutter 0.7s infinite alternate, move 10s linear infinite alternate';
+        let styleSheet = document.styleSheets[0];
+
+        if (!styleSheet.cssRules || [...styleSheet.cssRules].some(rule => rule.name === 'flutter')) {
+          styleSheet.insertRule(`
+            @keyframes flutter {
+              0% {
+                  transform: translateY(0) rotate(0deg);
+                  opacity: 0.5;
+                  left: 0;
+                  top: 50%;
+              }
+              50% {
+                  transform: translateY(-10px) rotate(5deg);
+              }
+              100% {
+                  transform: translateY(0) rotate(-5deg);
+                  left: 100%;
+                  top: 0;
+              }
+              `, styleSheet.cssRules.length);
+            }
+      }
+      
 
       //Setting the background image to the backgrounds array.
       document.body.style.backgroundImage = `url(${backgrounds[currentBackgroundIndex]})`;
@@ -245,10 +270,13 @@
             playerContainer.style.display = 'block';
             backgroundButton.style.display = 'none';*/
             variant.style.display = 'block';
+            variant.style.animation = 'none';
+            variant.style.animation = 'flutter 0.7s infinite alternate, move 10s linear infinite alternate';
+
             dialogueBox.style.top = '3%';
             dialogueBox.style.height = '12%';
             dialogueBox.style.display = 'block';
-            window.location.href = "http://localhost:5000/?showButterflies=true";
+            window.location.href = "https://lexicon-mu.vercel.app/";
           }
           
           let hue = 0;
