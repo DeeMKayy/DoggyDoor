@@ -198,7 +198,7 @@
               silverImage.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterBlue = 'sepia(1) hue-rotate(180deg) contrast(150%)';
-              localStorage.setItem('variant', filterBlue);
+              localStorage.setItem('variantFilter', filterBlue);
             });
       
             yellowImage.addEventListener('click', () => {
@@ -211,7 +211,7 @@
               silverImage.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterYellow = 'sepia(1) hue-rotate(10deg) contrast(150%)';
-              localStorage.setItem('variant', filterYellow);
+              localStorage.setItem('variantFilter', filterYellow);
             });
       
             greenImage.addEventListener('click', () => {
@@ -224,7 +224,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterGreen = 'sepia(1) hue-rotate(90deg) contrast(150%)';
-              localStorage.setItem('variant', filterGreen);
+              localStorage.setItem('variantFilter', filterGreen);
             });
       
             pinkImage.addEventListener('click', () => {
@@ -237,7 +237,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterPink = 'sepia(1) hue-rotate(300deg) contrast(150%)';
-              localStorage.setItem('variant', filterPink);
+              localStorage.setItem('variantFilter', filterPink);
             });
 
             purpleImage.addEventListener('click', () => {
@@ -250,7 +250,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterPurple = 'sepia(1) hue-rotate(240deg) contrast(150%)';
-              localStorage.setItem('variant', filterPurple);
+              localStorage.setItem('variantFilter', filterPurple);
             });
 
             silverImage.addEventListener('click', () => {
@@ -263,7 +263,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterSilver = 'grayscale(100%) contrast(150%)';
-              localStorage.setItem('variant', filterSilver);
+              localStorage.setItem('variantFilter', filterSilver);
             });
           }
 
