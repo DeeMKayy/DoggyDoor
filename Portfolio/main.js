@@ -196,8 +196,9 @@
               purpleImage.style.display = 'none';
               dialogueBox.style.display = 'none';
               silverImage.style.display = 'none';
-              variant.style.filter = 'sepia(1) hue-rotate(180deg) contrast(150%)';
               variantContainer.style.display = 'block';
+              const filterBlue = 'sepia(1) hue-rotate(180deg) contrast(150%)';
+              localStorage.setItem('variant', filterBlue);
             });
       
             yellowImage.addEventListener('click', () => {
@@ -208,8 +209,9 @@
               purpleImage.style.display = 'none';
               dialogueBox.style.display = 'none';
               silverImage.style.display = 'none';
-              variant.style.filter = 'sepia(1) hue-rotate(10deg) contrast(150%)';
               variantContainer.style.display = 'block';
+              const filterYellow = 'sepia(1) hue-rotate(10deg) contrast(150%)';
+              localStorage.setItem('variant', filterYellow);
             });
       
             greenImage.addEventListener('click', () => {
@@ -220,8 +222,9 @@
               purpleImage.style.display = 'none';
               silverImage.style.display = 'none';
               dialogueBox.style.display = 'none';
-              variant.style.filter = 'sepia(1) hue-rotate(90deg) contrast(150%)';
               variantContainer.style.display = 'block';
+              const filterGreen = 'sepia(1) hue-rotate(90deg) contrast(150%)';
+              localStorage.setItem('variant', filterGreen);
             });
       
             pinkImage.addEventListener('click', () => {
@@ -232,8 +235,9 @@
               purpleImage.style.display = 'none';
               silverImage.style.display = 'none';
               dialogueBox.style.display = 'none';
-              variant.style.filter = 'sepia(1) hue-rotate(300deg) contrast(150%)';
               variantContainer.style.display = 'block';
+              const filterPink = 'sepia(1) hue-rotate(300deg) contrast(150%)';
+              localStorage.setItem('variant', filterPink);
             });
 
             purpleImage.addEventListener('click', () => {
@@ -244,8 +248,9 @@
               purpleImage.style.display = 'none';
               silverImage.style.display = 'none';
               dialogueBox.style.display = 'none';
-              variant.style.filter = 'sepia(1) hue-rotate(240deg) contrast(150%)';
               variantContainer.style.display = 'block';
+              const filterPurple = 'sepia(1) hue-rotate(240deg) contrast(150%)';
+              localStorage.setItem('variant', filterPurple);
             });
 
             silverImage.addEventListener('click', () => {
@@ -256,8 +261,9 @@
               purpleImage.style.display = 'none';
               silverImage.style.display = 'none';
               dialogueBox.style.display = 'none';
-              variant.style.filter = 'grayscale(100%) contrast(150%)';
               variantContainer.style.display = 'block';
+              const filterSilver = 'grayscale(100%) contrast(150%)';
+              localStorage.setItem('variant', filterSilver);
             });
           }
 
