@@ -198,6 +198,7 @@
               silverImage.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterBlue = 'sepia(1) hue-rotate(180deg) contrast(150%)';
+              variant.style.filter = filterBlue;
               localStorage.setItem('variantFilter', filterBlue);
             });
       
@@ -211,6 +212,7 @@
               silverImage.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterYellow = 'sepia(1) hue-rotate(10deg) contrast(150%)';
+              variant.style.filter = filterYellow;
               localStorage.setItem('variantFilter', filterYellow);
             });
       
@@ -224,6 +226,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterGreen = 'sepia(1) hue-rotate(90deg) contrast(150%)';
+              variant.style.filter = filterGreen;
               localStorage.setItem('variantFilter', filterGreen);
             });
       
@@ -237,6 +240,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterPink = 'sepia(1) hue-rotate(300deg) contrast(150%)';
+              variant.style.filter = filterPink;
               localStorage.setItem('variantFilter', filterPink);
             });
 
@@ -250,6 +254,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterPurple = 'sepia(1) hue-rotate(240deg) contrast(150%)';
+              variant.style.filter = filterPurple;
               localStorage.setItem('variantFilter', filterPurple);
             });
 
@@ -263,6 +268,7 @@
               dialogueBox.style.display = 'none';
               variantContainer.style.display = 'block';
               const filterSilver = 'grayscale(100%) contrast(150%)';
+              variant.style.filter = filterSilver;
               localStorage.setItem('variantFilter', filterSilver);
             });
           }
