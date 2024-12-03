@@ -16,7 +16,7 @@
 
   //Declaring dialogue box and special butterfly variables 
   const dialogueBox = document.querySelector('.dialogue-box');
-  const specialButterfly = document.querySelector('.butterfly img');
+  const specialButterfly = document.getElementById('specialButterfly');
 
   let variantDisplayed = false;
   //Declaring a function to center the special butterfly on the screen.
@@ -33,8 +33,9 @@
 
     if (currentBackgroundIndex === 2) {
       specialButterfly.style.transition = '1s ease-in-out';
-      specialButterfly.style.transform = `translate(${930}px, ${5}px) scale(1.2)`; 
+      specialButterfly.style.transform = `translate(${930}px, ${5}px) scale(1.1)`; 
     }
+
   }
 
     let mouseMoved = false;
@@ -72,6 +73,8 @@
 
     //Adding event listener for when the mouse hovers over the special butterfly.
     specialButterfly.addEventListener('mouseover', () => {
+      console.log('mouseover');
+
       if (!dialogueBoxDispalyed) {
       dialogueBox.style.display = 'block';
       dialogueBoxDispalyed = true;
@@ -248,7 +251,6 @@
             dialogueBox.style.top = '3%';
             dialogueBox.style.height = '12%';
             dialogueBox.style.display = 'block';
-            window.location.href = "http://localhost:5000/?showButterflies=true";
           }
           
           let hue = 0;

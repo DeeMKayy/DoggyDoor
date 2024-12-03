@@ -90,10 +90,11 @@ body {
     transform: rotateY(360deg);
 }
 
-.butterfly img {
+#specialButterfly{
     width: 5%;
     display: none;
     position: absolute;
+    z-index: 10;
 }
 
 #variant {
@@ -158,7 +159,7 @@ body {
     justify-content: space-around;
     position: absolute;
     display: flex;
-    top: -370px;
+    top: -500px;
 }
 
 @keyframes flutter {
@@ -178,7 +179,7 @@ body {
     }
 }
 
-  /* Media query for tablet-sized screens */
+  /* Media query for tablet-sized screens
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .dialogue-box {
         display: block; 
@@ -187,7 +188,7 @@ body {
     .butterfly-container {
         top: -55%;
     }    
-}
+} */
 
 .dialogue-box, #output, .variant-container {
     display: none;
