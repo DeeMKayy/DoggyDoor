@@ -66,8 +66,9 @@
     const dialogues = [
       "Hello there, Welcome to Flutterfields, home to the animated butterflies. What's your name?",
       "I bet you've never had a butterfly of your own. Let's make you a navigation butterfly. It'll help you proceed to the next project or proceed to the fens! Choose a color: ",
-      "Welcome to FlutterClub, notice the lights? I agree, the synchronized fluttering is kind of cringe. Well no need to wait any longer, let's go home.",
-      "We're home! Thanks for staying for the journey, I hope you enjoyed it too. I bet next time you visit they'll be more features, for now, you can use the social links my friends have to reach her. They even have one that let's you view her other projects! In conclusion, if you want a website of your own, tap the button below and let her make your personal/business web presence dreams come true!"
+      "First, we have Guess game. This Java (Spring Boot) and Vue.js project features a user interface designed to align with modern usability standards. Through its development, she implemented RESTful APIs, configured CORS policies, and integrated asynchronous HTTP requests to enhance real-time functionality. The project served as a practical exercise in full-stack development, demonstrating her ability to bridge frontend design with backend logic seamlessly.",
+      "Next, there's Doggy Door! To deepen her Java expertise, she developed this platform, incorporating JWT authentication and role-based access controls to ensure secure user interactions. The React.js frontend dynamically adapts button functionalities based on authenticated user roles, showcasing her proficiency in frontend-backend integration. Additionally, she optimized performance by utilizing AWS S3 for efficient image storage, significantly reducing load times.",
+      "Onto the third, her most recent project, SmartScribe. Leveraging Java in the backend, she built an AI-powered assistant that retrieves relevant web search results and automates document modifications based on user prompts. The tool streamlines tasks such as cross-referencing information from multiple sources or summarizing lengthy PDFs, highlighting her ability to create solutions that enhance productivity through intelligent automation."
     ];
 
     //Adding event listener for when the mouse hovers over the special butterfly.
