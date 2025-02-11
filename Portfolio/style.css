@@ -422,3 +422,72 @@ body {
 }
 
 
+.card {
+    display: none;
+    width: 784px;
+    height: 374px;
+    background: rgba(211, 211, 211, 0.199);
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #c1 {
+    background-image: url('./images/guess.png');
+
+  }
+  
+  #c2 {
+    background-image: url('./images/DoggyDoor.png');
+  }
+  
+  #c3 {
+    background-image: url('./images/lexicon.png');
+  }
+  
+  #c4 {
+    background-image: url('./images/myprof.png');
+  }
+  
+  .project-cards:hover #c1 {
+    transform: translateX(-100px) rotate(-40deg);
+  }
+  
+  .project-cards:hover #c2 {
+    transform: translateX(-50px)  rotate(-30deg);
+  }
+  
+  .project-cards:hover #c3 {
+    transform: translateX(0) rotate(-20deg);
+  }
+  
+  .project-cards:hover #c4 {
+    transform: translateX(50px) rotate(-10deg);
+  }
+  
+  #c1:hover {
+    transform: translateX(-150px) translateY(450px) rotate(0deg) !important;
+  }
+  
+  #c2:hover {
+    transform: translateX(-100px) translateY(450px) rotate(0deg) !important;
+  }
+  
+  #c3:hover {
+    transform: translateX(-50px) translateY(450px) rotate(0deg) !important;
+  }
+  
+  #c4:hover {
+    transform: translateX(50px) rotate(0deg) !important;
+  }
+  
+  .project-cards {
+    display: grid;
+    height: 50vmax;
+    place-items: center;
+  }

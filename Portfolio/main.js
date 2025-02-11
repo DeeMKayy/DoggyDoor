@@ -164,6 +164,7 @@
       const pinkImage = document.getElementById('pink');
       const purpleImage = document.getElementById('purple');
       const silverImage = document.getElementById('silver');
+      const projectCards = document.querySelectorAll('.card');
       //Adding event listener for when background changing button is clicked.
     
       backgroundButton.addEventListener('click', () => {
@@ -296,6 +297,7 @@
           let hue = 0;
           
           if (currentBackgroundIndex === 3) {
+            projectCards.style.display = 'block';
             function colorChange() {
               hue = (hue + 1) % 360;
               butterflyContainer.style.filter = `hue-rotate(${hue}deg)`;
